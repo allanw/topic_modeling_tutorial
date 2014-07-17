@@ -5,7 +5,7 @@
 # Licensed under the GNU LGPL v2.1 - http://www.gnu.org/licenses/lgpl.html
 
 """
-USAGE: %(program)s OUTPUT_DIRECTORY URL1 [URL2 ...]
+USAGE: %(program)s OUTPUT_DIRECTORY [URL1, URL2 ...]
 
 Download all files pointed at by the given URLs, into OUTPUT_DIRECTORY (which must already exist).
 
@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     # check and process cmdline input
     program = os.path.basename(sys.argv[0])
-    if len(sys.argv) < 3:
+    if len(sys.argv) < 2:
         print(globals()['__doc__'] % locals())
         sys.exit(1)
     outdir = sys.argv[1]
